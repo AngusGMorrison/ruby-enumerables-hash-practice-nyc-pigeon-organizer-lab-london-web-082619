@@ -11,15 +11,13 @@ def nyc_pigeon_organizer(data)
           reorganized[name] = {}
         end
         
-        #Check whether the current name has the current property key, and push/create the variant value accordingly
+        #Check whether the current name has the current property key
         unless reorganized[name].has_key?(property)
-          reorganized[name].has_key?(property)
-        
-        if reorganized[name][property]
-          reorganized[name][property] << variant.to_s
-        else
-          reorganized[name][property] = [variant.to_s]
+          reorganized[name][property] = []
         end
+
+        #Append the variant to the property array
+        reorganized[name][property] << variant.to_s
         
       end
     end
