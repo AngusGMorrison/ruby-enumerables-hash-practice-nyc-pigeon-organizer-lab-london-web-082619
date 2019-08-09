@@ -5,6 +5,7 @@ def nyc_pigeon_organizer(data)
   data.each_pair do | property, variant |
     variant.each_pair do | variant, names |
       names.each do | name |
+        
         #If the name doesn't already exist in the reorganized hash, add the name key with an empty hash value
         unless reorganized.has_key?(name)
           reorganized[name] = {}
