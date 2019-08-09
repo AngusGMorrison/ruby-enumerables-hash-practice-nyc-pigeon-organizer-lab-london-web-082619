@@ -12,6 +12,9 @@ def nyc_pigeon_organizer(data)
         end
         
         #Check whether the current name has the current property key, and push/create the variant value accordingly
+        unless reorganized[name].has_key?(property)
+          reorganized[name].has_key?(property)
+        
         if reorganized[name][property]
           reorganized[name][property] << variant.to_s
         else
